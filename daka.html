@@ -3,8 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>哈尼打卡</title>
+    <script type="text/javascript">
+        // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+        function CalculateTotal(event) {
+            var input = document.getElementById("exercise_amount");
+            var output = document.getElementById("output");
+            output.value = +input.value + 1;
+        }
+
+        // Internet Explorer
+        // function OnPropChanged (event) {
+        //     if (event.propertyName.toLowerCase () == "value") {
+        //         alert ("The new content: asdfasdf" + event.srcElement.value);
+        //     }
+        // }
+    </script>
+    <style>
+        input{
+            width:50px;
+        }
+    </style>
 </head>
 <body>
-<p>adfasjdf20efwvawf</p>
+
+<table border="1">
+    <tr>
+        <th>事件</th>
+        <th>计量值</th>
+        <th>正确率</th>
+        <th>天数</th>
+        <th>备注</th>
+    </tr>
+    <tr>
+        <td>运动</td>
+        <td><input type="text" id="exercise_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="exercise_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>背单词</td>
+        <td><input type="text" id="words_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="words_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>作文</td>
+        <td><input type="text" id="writing_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="writing_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>LeetCode</td>
+        <td><input type="text" id="leetcode_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="leetcode_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>读书</td>
+        <td><input type="text" id="reading_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="reading_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>博客</td>
+        <td><input type="text" id="blog_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td>-</td>
+        <td><input type="text" id="blog_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>阅读</td>
+        <td><input type="text" id="reading_comprehension_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="reading_comprehension_correctness" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="reading_comprehension_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>听力</td>
+        <td><input type="text" id="listening_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="listening_correctness" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="listening_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>Verbal</td>
+        <td><input type="text" id="verbal_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="verbal_correctness" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="verbal_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td><input type="text" id="math_amount" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="math_correctness" value="0" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" id="math_days" value="1" oninput="CalculateTotal (event)"/></td>
+        <td><input type="text" value="-"/></td>
+    </tr>
+
+</table>
+<p>
+    <h3>总金额:</h3>
+    <input type="text" id="output"/>
+</p>
+
 </body>
 </html>
